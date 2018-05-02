@@ -3,34 +3,34 @@
 
 #### Student number
 
--
+:question:
 
 
 #### Degree
 
--
+:question:
 
 
 #### Home town (or country)
 
--
+:question:
 
 
 #### Favourite languages 
 
- 1. -
- 2. -
- 3. -
+ 1. :question:
+ 2. :question:
+ 3. :question:
 
 
 #### I want to learn
 
- * -
- * -
- * -
+ * :question:
+ * :question:
+ * :question:
 
 
 ## Some links:
 
- * [My GitHub profile](https://github.com/-)
- * -
+ * [My GitHub profile](https://github.com/:question:)
+ * :question:
