@@ -14,12 +14,34 @@
   <script>hljs.initHighlightingOnLoad();</script>
 </head>
 <body class='dark'>
+  
   <div>
-    <a href="https://uonsocialcoding.github.io/GitGud/presentation/index.html">https://uonsocialcoding.github.io/GitGud/presentation/index.html</a>
-    <notes>We've got lot's to talk about, and I'm going to move through things quickly. I recommend you follow along here.</notes>
+    goo.gl/wRNd3S
   </div>
-  <div>Quick recap: <em>repositories</em></div>
-  <div>Repositories are a collection of a project's code.</div>
+  
+  <div>
+    Welcome! ❤️
+    <notes>
+      So first of all, welcome.
+    </notes>
+  </div>
+
+  <div>
+    We'll be discussing:
+    <ul>
+      <li>Taking your repo online</li>
+      <li>Contributing to <em>open source</em> software</li>
+      <li>And some practical stuff! 🎉</li>
+    </ul>
+    <notes>
+      We've got lots to talk about, and I'm going to try and move through things relatively quickly. If I go too quickly, please someone stop me. Also feel free to ask questions at any time throughout this presentation.
+    </notes>
+  </div>
+
+  <div>
+    A quick recap: <em>repositories</em>
+  </div>
+
   <div>
     They contain:
     <ul>
@@ -27,54 +49,106 @@
       <li>Branches</li>
       <li>Source code</li>
       <li>Documentation</li>
-      <li>Anything else required by your project</li>
+      <li>Other junk</li>
     </ul>
   </div>
+
   <div>
     Repositories <em>do not</em> have to be local!
-    <notes>And that's the crux of this presentation</notes>
+    <notes>
+      We can host them on the internet; and that's the crux of this presentation
+    </notes>
   </div>
+
   <div>
+    There are some great websites for this:
     <ul>
       <li>GitHub</li>
       <li>GitLab</li>
       <li>BitBucket</li>
       <li>and more...</li>
     </ul>
-    <notes>These websites are the reason that open source programming exists. You host a repo online, and anyone in the world can learn from and contribute to the code. Also, these websites will come in handy for any group programming assignments.</notes>
+    <notes>
+      These websites are the reason that open source programming exists. You host a repo online, and anyone in the world can learn from and contribute to the code. Also, these websites will come in handy for any group programming assignments.
+    </notes>
   </div>
-  <div>We'll be using <em>GitHub</em> for group projects.</div>
-  <div class="blink">Get familiar with it!</div>
-  <div data-background-image="https://i.imgur.com/O6FqJGG.png">
-    <notes>This is an organisation</notes>
+
+  <div>
+    We'll be using <em>GitHub</em> for group projects.
+    <notes>
+      Voxel Engine is already hosted here.
+    </notes>
   </div>
+  
   <div data-background-image="https://i.imgur.com/s3lLCHy.png">
     <notes>
-Even this presentation has a git repo! Notice GitHub adds a bunch of additional features. You have issues, project boards, a wiki. Also there is tonnes of additional software such as continuous integration and code quality tools
+      Even this presentation has a git repo! It's called GitGud.
+      Notice GitHub adds a bunch of additional features. You have issues, project boards, a wiki. Also there is tonnes of additional software such as continuous integration and code quality tools. There is a lot to learn here.
     </notes>
   </div>
-  <div>So how do we actually contribute to GitHub repos?</div>
+
   <div>
-    We have to <em>push</em> and <em>pull</em>.
+    Okay Sean, but <em>how do we contribute</em>?
+  </div>
+
+  <div>
+    We have to understand <em>local</em> and <em>remote</em>.
+  </div>
+
+  <div data-background-image="images/local-and-remote.png">
     <notes>
-In git, we say that each repository has two copies. We call these local and remote. Every contributor has their own local copy, and remote is treated as the master.
+      A local repo is a repository that is stored on your computer, and each contributor has one. There is then one remote, that is shared by everyone. This remote repo is considered the master.
     </notes>
   </div>
+
   <div>
-    <em>Pushing</em>: sending commits from your local repo to remote.
-    <notes>You make changes, and you send them to the main repo for everyone else to see.</notes>
+    <em>Push:</em> send commits from local to remote.
+    <notes>
+      Once you've made some changes on your local repo, you can push them to remote for everyone to see. You can push as often as you like, and in fact, I strongly recommend it.
+    </notes>
   </div>
+
+  <div data-background-image="images/pushing.png">
+    <notes>
+      Notice that pushing, does not automatically update every repo. Only the remote. 
+      In the above example, we can see that I pushed some changes to remote, yet the other contributors are still only on version 1.0.
+      This is a very important feature; it prevents changes that one contributor makes, from interrupting the changes of another contributor.
+      So how do we solve this? How do the other contributors catch up to the remote?
+    </notes>
+  </div>
+
   <div>
-    <em>Pulling</em>: retrieving new commits from remote.
-    <notes>It is a form of synchronisation. You're making sure that local and remote are in the same state. Note, draw a diagram on the board at this point, showing that each user has a local.</notes>
+    <em>Pull:</em> retrieve new updates from remote.
+    <notes>
+      Pulling is a form of synchronisation. You're updating your local repo, to be more like remote.
+    </notes>
   </div>
-  <div><em>Questions?</em> Before I move on...</div>
+
+  <div data-background-image="images/pulling.png">
+    <notes>
+      Notice here that Jon has pulled, and his local repo is now up to date! We strongly recommend that you always pull before making changes to a repository. It simplifies things in the long run.
+    </notes>
+  </div>
+
+  <div>
+    Questions?
+    <notes>
+      There's just one more thing to learn before we can do something practical.
+    </notes>
+  </div>
+
+
   <div>
     <em>Cloning!</em>
-    <notes>Cloning is the act of copying a remote repository onto your computer.</notes>
+    <notes>
+      Cloning involves copying a remote repository onto your computer.
+    </notes>
   </div>
+
   <div>
-    Let's do something <em>practical</em>
+    Let's do something <em>practical</em> 🎊
   </div>
+
 </body>
+
 </html>

@@ -42,7 +42,7 @@ em {
 }
 
 .dark em {
-  color: #2e86c1;
+  color: #f39c12 ;
 }
 
 .light a {
@@ -75,7 +75,7 @@ img {
 }
 
 div.slide-container {
-  background-size: 100%;
+  background-size: cover;
   display: flex;
   align-items: center;
 }
