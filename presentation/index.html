@@ -6,6 +6,7 @@
   <title>Big</title>
   <link href='big.css' rel='stylesheet' type='text/css' />
   <link href='highlight.css' rel='stylesheet' type='text/css' />
+  <link href='https://cdn.jsdelivr.net/devicons/1.8.0/css/devicons.min.css' rel='stylesheet'>
   <style>
     .new-shiny { background: #aaaaaa; }
   </style>
@@ -31,7 +32,7 @@
     <ul>
       <li>Taking your repo online</li>
       <li>Contributing to <em>open source</em> software</li>
-      <li>And some practical stuff! 🎉</li>
+      <li>And lots of practical stuff! 🎉</li>
     </ul>
     <notes>
       We've got lots to talk about, and I'm going to try and move through things relatively quickly. If I go too quickly, please someone stop me. Also feel free to ask questions at any time throughout this presentation.
@@ -69,21 +70,20 @@
       <li>and more...</li>
     </ul>
     <notes>
-      These websites are the reason that open source programming exists. You host a repo online, and anyone in the world can learn from and contribute to the code. Also, these websites will come in handy for any group programming assignments.
+      These websites are the reason that open source programming exists. You host a repo online, and anyone in the world can learn from and contribute to the code. They will also come in very handy for group programming assignments.
     </notes>
   </div>
 
   <div>
-    We'll be using <em>GitHub</em> for group projects.
+    We'll be using <em><span class="devicons">&#xe609;</span>GitHub</em> for group projects
     <notes>
       Voxel Engine is already hosted here.
     </notes>
   </div>
   
-  <div data-background-image="https://i.imgur.com/s3lLCHy.png">
+  <div data-background-image="https://i.imgur.com/s3RCNg8.png">
     <notes>
       Even this presentation has a git repo! It's called GitGud.
-      Notice GitHub adds a bunch of additional features. You have issues, project boards, a wiki. Also there is tonnes of additional software such as continuous integration and code quality tools. There is a lot to learn here.
     </notes>
   </div>
 
@@ -92,20 +92,34 @@
   </div>
 
   <div>
-    We have to understand <em>local</em> and <em>remote</em>.
+    We have to understand <em>local</em> and <em>remote</em>
   </div>
 
   <div data-background-image="images/local-and-remote.png">
     <notes>
-      A local repo is a repository that is stored on your computer, and each contributor has one. There is then one remote, that is shared by everyone. This remote repo is considered the master.
+      A local repo is a repository that is stored on your computer, and each contributor has one. There is then one remote, that is shared by everyone. This remote repo is called original.
     </notes>
   </div>
 
   <div>
-    <em>Push:</em> send commits from local to remote.
+    <em>Push:</em> send commits from local to remote
+    <pre>git <em>push</em> origin master</pre>
     <notes>
       Once you've made some changes on your local repo, you can push them to remote for everyone to see. You can push as often as you like, and in fact, I strongly recommend it.
     </notes>
+  </div>
+
+  <div>
+    Name of remote
+    <pre>git push <em>origin</em> master</pre>
+    <notes>
+      It's conventional to call our remote origin. And if you have problems with git later down the track and you need to scour StackOverflow, it will be invaluable to have your remote named origin.
+    </notes>
+  </div>
+
+  <div>
+    Which branch?
+    <pre>git push origin <em>master</em></pre>
   </div>
 
   <div data-background-image="images/pushing.png">
@@ -118,7 +132,8 @@
   </div>
 
   <div>
-    <em>Pull:</em> retrieve new updates from remote.
+    <em>Pull:</em> retrieve new updates from remote
+    <pre>git <em>pull</em></pre>
     <notes>
       Pulling is a form of synchronisation. You're updating your local repo, to be more like remote.
     </notes>
@@ -131,22 +146,118 @@
   </div>
 
   <div>
-    Questions?
-    <notes>
-      There's just one more thing to learn before we can do something practical.
-    </notes>
-  </div>
-
-
-  <div>
     <em>Cloning!</em>
+    <pre>git <em>clone</em> https://github.com/(...).git</pre>
     <notes>
-      Cloning involves copying a remote repository onto your computer.
+      Cloning involves copying a remote repository onto your computer. It's kind of like an initial pull.
     </notes>
   </div>
 
   <div>
-    Let's do something <em>practical</em> 🎊
+    There is a better way to clone. <img src="images/ssh.gif" style="max-width: 70vh;margin: 0.2em auto;display: block;border-radius: 0.03em;" />
+    <notes>Normally, when you clone a repo from GitHub, you have to enter your username and password. This can be quite painful, especially if you use a password manager. To get around this, we can make the swap to SSH. However, it will require some set up on your part. You'll need to generate an SSH key, and add it to your GitHub account. I'll leave this as an exercise for you to do in your own time though. So for now, just use HTTPS.</notes>
+  </div>
+
+  <div>
+    A quick <em>review</em>. Our new process is:
+    <ol>
+      <li>Clone or pull from remote</li>
+      <li>Make modifications</li>
+      <li>Stage changes</li>
+      <li>Commit with meaningful message</li>
+      <li>Push</li>
+    </ol>
+  </div>
+
+  <div>
+    Or, in command form:
+    <ol>
+      <li><code>git <em>clone</em> ...</code> or <code>git <em>pull</em></code></li>
+      <li>Make modifications</li>
+      <li><code>git <em>add</em> *</code></li>
+      <li><code>git <em>commit</em> -m "Meaningful message"</code></li>
+      <li><code>git <em>push</em> origin master</code></li>
+    </ol>
+  </div>
+
+  <div>
+    Questions?
+  </div>
+
+  <div>
+    Let's dive into something <em>practical</em> 🎊
+  </div>
+
+  <div>
+    But wait! There's a problem with this setup...
+    <notes>
+      With the current setup, anyone can push anything they want at any time. How do we control code quality? How do we keep things consistent? And, should it ever come to it, what happens if we want to reject a change?
+    </notes>
+  </div>
+
+  <div>
+    With <em>Forking!</em> <span class="devicons">&#xe625;</span>
+    <notes>
+      Forking is like cloning the remote repository.
+    </notes>
+  </div>
+
+  <div data-background-image="images/forking.png">
+    <notes>
+      When we utilise forking, each contributor has two repositories. One local and one remote. There is then a common remote that is considered the original, main repository, as seen in the middle of this diagram. However, the benefits of this may not be immediately obvious.
+    </notes>
+  </div>
+
+  <div>
+    <em>Pull requests</em> <span class="devicons">&#xe626;</span>
+    <ol>
+      <li>Bridge the gap between remotes</li>
+      <li>Allow maintainers to review code</li>
+      <li>Automated software</li>
+    </ol>
+    <notes>
+      Once you've forked a repository and made some changes, it's time to make a pull request to the original repository. A pull request, is a formal request for a project maintainer to review your code, and then pull your changes into the main repository. The project's maintainers will provide you with feedback. Such feedback may be: add a comment here, remove this line, please use this feature instead. The goal is to have some sort of cyclical process.
+    </notes>
+  </div>
+
+  <div data-background-image="https://i.imgur.com/hnNQnD6.png">
+    <notes>So let's dissect a pull request on GitHub. There is a lot going on here, but don't worry, I'm going to break it down. For starters, at the top of every pull request is a title and a description.</notes>
+  </div>
+
+  <div data-background-image="https://i.imgur.com/RtoFAqt.png"></div>
+  <div data-background-image="https://i.imgur.com/FzdADbB.png"></div>
+
+  <div>
+    <em>Project maintainers</em> keep a project on track
+    <notes>
+      Not only are project maintainers vital for maintaining code quality, but they are also community managers. Around any large open source project is a community. A community of contributors that interact with each other on a daily basis. It is the role of the maintainer to ensure that contributors have any resources they might need, and are managed in such a way that the project development can feasible continue forever. For VoxelEngine, Jon and I will be the project maintainers. So if you have any questions, feel free to ask either of us.
+    </notes>
+  </div>
+
+  <div>
+    Another quick <em>recap</em>. Our cyclical process is now:
+    <ol>
+      <li>Fork</li>
+      <li>Clone</li>
+      <li>Change, stage, commit</li>
+      <li>Push</li>
+      <li>Make a pull request</li>
+    </ol>
+  </div>
+
+  <div>
+    Let's do something else <em>practical</em> 🎉
+  </div>
+
+  <div>
+    It's dangerous to go alone... take these:
+    <ul>
+      <li>Don't forget to fork first!</li>
+      <li><code>git <em>clone</em> ...</code> or <code>git <em>pull</em></code></li>
+      <li><code>git <em>status</em></code> and <code>git <em>add</em> *</code></li>
+      <li><code>git <em>commit</em> -m "meaningful message"</code></li>
+      <li><code>git <em>push</em> origin master</code></li>
+    </ul>
   </div>
 
 </body>

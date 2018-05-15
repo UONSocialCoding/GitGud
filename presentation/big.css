@@ -42,7 +42,7 @@ em {
 }
 
 .dark em {
-  color: #f39c12 ;
+  color: #f39c12;
 }
 
 .light a {
@@ -75,7 +75,9 @@ img {
 }
 
 div.slide-container {
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
   display: flex;
   align-items: center;
 }
@@ -155,4 +157,28 @@ body.jump-mode div.slide-container:hover {
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-timing-function: cubic-bezier(1.0,0,0,1.0);
   -webkit-animation-duration: 800ms;
+}
+
+pre {
+  /*margin: 0;*/
+  font-weight: normal;
+}
+
+code, pre {
+  background: rgba(0, 0, 0, 0.2);
+  font-size: 75%;
+  padding: 0.12em 0;
+  border-radius: 0.1em;
+}
+
+code {
+  white-space: pre-wrap;
+}
+
+code em, pre em {
+  color: #f39c12;
+}
+
+pre:before, pre:after, code:before, code:after {
+  content: '\00a0';
 }
