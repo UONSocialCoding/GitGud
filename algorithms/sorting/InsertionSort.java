@@ -1,5 +1,5 @@
 public class InsertionSort{
-	if(unsorted()){
+	if(!sorted()){
 		sort();
 	}
 }
