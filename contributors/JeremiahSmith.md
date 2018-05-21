@@ -1,6 +1,4 @@
-# Your full name (Your GitHub account name)
-
-Jeremiah Smith (psygypsie)
+# Jeremiah Smith (psygypsie)
 
 #### Student number
 
